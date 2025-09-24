@@ -26,8 +26,23 @@ const power = function(a, b) {
 	return a ** b;
 };
 
-const factorial = function() {
-	
+const factorial = function(a) {
+	if (a === 0) {
+		return 1;
+	} else {
+		let start;
+		if (a === 1) {
+			start = a;
+		} else {
+			start = a - 1;
+		}
+		let total = a * start;
+		for (let i = 0; i < a - 2; i++) {
+			start--;
+			total *= start;
+		}
+		return total;
+	}
 };
 
 // Do not edit below this line
